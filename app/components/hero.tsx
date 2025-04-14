@@ -117,23 +117,22 @@ export default function Hero() {
       </div>
 
       {/* Decorative Overlay - Right Side */}
-      <div className="absolute top-[-260px] right-0 w-[300px] h-full z-0">
-        <Image
-          src="/images/shape_image_3.ef64cd77e2d47a683564.webp"
-          alt="Decorative lines and hex boxes"
-          fill
-          className="left-10 brightness-[2] object-contain w-32 opacity-40"
-        />
-      </div>
+      <Image
+        src="/images/shape_image_3.ef64cd77e2d47a683564.webp"
+        alt="Decorative lines and hex boxes"
+        width={400}
+        height={80}
+        className="brightness-[2] absolute top-[110px] right-[20px] object-contain full opacity-40"
+      />
 
       {/* Glowing Dot and Line - Bottom Right */}
-      <div className="absolute bottom-[40px] right-[40px] w-6 h-6 bg-[#2c6eff] rounded-full shadow-[0_0_15px_4px_#2c6eff] z-10" />
+      <div className="absolute bottom-[40px] right-[40px] w-6 h-6 bg-[#2c6eff] rounded-full shadow-[0_0_15px_4px_#2c6eff] z-10" ></div>
       <Image
         src="/images/shape_image_4.7cff8112270c84d346dd.webp"
         alt="Corner Line"
         width={400}
         height={80}
-        className=" absolute bottom-[135px] right-[20px] opacity-30"
+        className="absolute bottom-[110px] right-[20px] opacity-30 object-contain"
       />
     </section>
   );
