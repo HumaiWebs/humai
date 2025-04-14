@@ -1,30 +1,18 @@
 import { PhoneCall } from "lucide-react";
 import Link from "next/link";
 import Image from "next/image";
-import "@/app/globals.css"; // optional: in case global styles/animations are needed
+import "@/app/globals.css"; // Optional: for global styles or animations
+import Header from "./header";
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#05093d] min-h-screen text-white px-6 py-16 flex flex-col lg:flex-row items-center justify-center gap-12 overflow-hidden">
-      {/* Background lines/images */}
-      <Image
-        src=""
-        alt="Decorative line"
-        className="absolute top-0 left-0 w-40 opacity-70"
-        width={700}
-        height={50}
-      />
-      <Image
-        src=""
-        alt="Decorative line"
-        className="absolute bottom-0 left-0 w-40 opacity-70"
-        width={700}
-        height={50}
-      />
+    <section className="relative bg-[#05093d] min-h-screen text-white   flex flex-col lg:flex-row items-center justify-center gap-12 overflow-hidden">
+      {/* Main Content Left Side */}
       <div className="w-full flex flex-col justify-between h-full">
         <div className="w-full flex items-center justify-center flex-col lg:flex-row">
           {/* Left Section */}
           <div className="max-w-xl space-y-6 z-10">
+            {/* Top Decorative Line */}
             <div className="absolute top-[90px] left-[152px] w-full max-w-[1034px] z-[100]">
               <div className="w-full relative h-28">
                 <Image
@@ -39,11 +27,13 @@ export default function Hero() {
             <p className="text-sm text-[#7a7aff] font-semibold">
               PERFECT COMPANY SOLUTION
             </p>
+
             <h1 className="text-4xl md:text-5xl font-bold">
               We Help Companies in{" "}
               <span className="text-[#2c6eff]">Digitizing</span> Their
               Businesses.
             </h1>
+
             <p className="text-gray-300">
               In today’s rapidly evolving digital landscape, staying ahead of
               the curve is essential for businesses aiming to thrive and
@@ -62,19 +52,20 @@ export default function Hero() {
             </ul>
 
             <div className="flex items-center gap-4 flex-wrap">
-              <Link href="/contact" passHref legacyBehavior>
-                <a className="bg-[#2c6eff] hover:bg-[#1d4ed8] rounded-full px-6 py-3 text-base text-white">
-                  CONTACT US TODAY!
-                </a>
+              <Link
+                href="/contact"
+                passHref
+                className="bg-[#2c6eff] hover:bg-[#1d4ed8] rounded-full px-6 py-3 text-base text-white">
+                CONTACT US TODAY!
               </Link>
 
               <div className="flex items-center gap-2 bg-green-500 rounded-full px-6 py-3 text-white">
                 <PhoneCall size={16} />
-                <div className="text-sm">
-                  <p>(+92) 349 1703748</p>
-                </div>
+                <p className="text-sm">(+92) 349 1703748</p>
               </div>
             </div>
+
+            {/* Bottom Decorative Line */}
             <div className="absolute bottom-[90px] left-[152px] w-full max-w-[1034px] z-[100]">
               <div className="w-full relative h-28">
                 <Image
@@ -87,10 +78,9 @@ export default function Hero() {
             </div>
           </div>
 
-          {/* Right Section with rotating layers */}
-
+          {/* Right Section - Rotating Layers */}
           <div className="w-full lg:w-[40%] relative flex justify-center items-center">
-            {/* Image 1 (base layer) */}
+            {/* Base Layer */}
             <Image
               src="/images/circle_engine_4.ff7d2b5855002c5b9d7f.webp"
               alt="Base Layer"
@@ -98,7 +88,7 @@ export default function Hero() {
               width={500}
               height={500}
             />
-            {/* Image 2 - rotating clockwise */}
+            {/* Rotating Clockwise */}
             <Image
               src="/images/circle_engine_3.9ec03a6ef0dda5efc029.webp"
               alt="Rotating Layer Clockwise"
@@ -106,7 +96,7 @@ export default function Hero() {
               width={450}
               height={450}
             />
-            {/* Image 3 - rotating counterclockwise */}
+            {/* Rotating Counterclockwise */}
             <Image
               src="/images/circle_engine_2.c1a725b3f7f22926cc36.webp"
               alt="Rotating Layer Anticlockwise"
@@ -114,7 +104,7 @@ export default function Hero() {
               width={400}
               height={400}
             />
-            {/* Image 4 (top layer) */}
+            {/* Top Layer */}
             <Image
               src="/images/circle_engine_1.41a566c9c404c6c0c8dc.webp"
               alt="Top Layer"
@@ -124,8 +114,27 @@ export default function Hero() {
             />
           </div>
         </div>
-      </div>{" "}
-      {/* Main content wrapper */}
+      </div>
+
+      {/* Decorative Overlay - Right Side */}
+      <div className="absolute top-[-260px] right-0 w-[300px] h-full z-0">
+        <Image
+          src="/images/shape_image_3.ef64cd77e2d47a683564.webp"
+          alt="Decorative lines and hex boxes"
+          fill
+          className="left-10 brightness-[2] object-contain w-32 opacity-40"
+        />
+      </div>
+
+      {/* Glowing Dot and Line - Bottom Right */}
+      <div className="absolute bottom-[40px] right-[40px] w-6 h-6 bg-[#2c6eff] rounded-full shadow-[0_0_15px_4px_#2c6eff] z-10" />
+      <Image
+        src="/images/shape_image_4.7cff8112270c84d346dd.webp"
+        alt="Corner Line"
+        width={400}
+        height={80}
+        className=" absolute bottom-[135px] right-[20px] opacity-30"
+      />
     </section>
   );
 }
