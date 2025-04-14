@@ -41,11 +41,13 @@ export default function Hero() {
             </p>
             <h1 className="text-4xl md:text-5xl font-bold">
               We Help Companies in{" "}
-              <span className="text-[#2c6eff]">Digitizing</span> Their Businesses.
+              <span className="text-[#2c6eff]">Digitizing</span> Their
+              Businesses.
             </h1>
             <p className="text-gray-300">
-              In today’s rapidly evolving digital landscape, staying ahead of the
-              curve is essential for businesses aiming to thrive and succeed.
+              In today’s rapidly evolving digital landscape, staying ahead of
+              the curve is essential for businesses aiming to thrive and
+              succeed.
             </p>
 
             <ul className="space-y-2">
@@ -66,11 +68,10 @@ export default function Hero() {
                 </a>
               </Link>
 
-              <div className="flex items-center gap-2 bg-green-500 rounded-full px-4 py-2 text-white">
+              <div className="flex items-center gap-2 bg-green-500 rounded-full px-6 py-3 text-white">
                 <PhoneCall size={16} />
                 <div className="text-sm">
-                  <p className="text-xs">CONTACT US DAILY</p>
-                  <p>(+420) 318 568 511</p>
+                  <p>(+92) 349 1703748</p>
                 </div>
               </div>
             </div>
@@ -87,6 +88,7 @@ export default function Hero() {
           </div>
 
           {/* Right Section with rotating layers */}
+
           <div className="w-full lg:w-[40%] relative flex justify-center items-center">
             {/* Image 1 (base layer) */}
             <Image
@@ -96,7 +98,6 @@ export default function Hero() {
               width={500}
               height={500}
             />
-
             {/* Image 2 - rotating clockwise */}
             <Image
               src="/images/circle_engine_3.9ec03a6ef0dda5efc029.webp"
@@ -105,7 +106,6 @@ export default function Hero() {
               width={450}
               height={450}
             />
-
             {/* Image 3 - rotating counterclockwise */}
             <Image
               src="/images/circle_engine_2.c1a725b3f7f22926cc36.webp"
@@ -114,7 +114,6 @@ export default function Hero() {
               width={400}
               height={400}
             />
-
             {/* Image 4 (top layer) */}
             <Image
               src="/images/circle_engine_1.41a566c9c404c6c0c8dc.webp"
@@ -125,9 +124,7 @@ export default function Hero() {
             />
           </div>
         </div>
-
-      </div>
-
+      </div>{" "}
       {/* Main content wrapper */}
     </section>
   );
