@@ -9,22 +9,20 @@ export default function Hero() {
     <section className="relative bg-[#05093d] min-h-screen flex flex-col">
       {/* Main Content Left Side */}
       <Header />
-      <div className="text-white flex-1 w-full flex flex-col lg:flex-row items-center justify-center gap-12 overflow-hidden">
-        <div className="w-full flex flex-col justify-between h-full">
-          <div className="w-full flex items-center justify-center flex-col lg:flex-row">
+      <div className="text-white flex-1 w-full flex flex-col items-center justify-center gap-12 overflow-hidden">
+        <div className="w-full flex-1 flex flex-col h-full">
+          <div className="w-[50%] relative h-28">
+            <Image
+              src="/images/header-bottom-line.webp"
+              alt="Decorative background"
+              className="brightness-[2] object-contain w-full opacity-40"
+              fill
+            />
+          </div>
+          <div className="w-full flex-1 flex items-center justify-center flex-col lg:flex-row">
             {/* Left Section */}
             <div className="max-w-xl space-y-6 z-10">
               {/* Top Decorative Line */}
-              <div className="absolute top-[90px] left-[152px] w-full max-w-[1034px] z-[100]">
-                <div className="w-full relative h-28">
-                  <Image
-                    src="/images/header-bottom-line.webp"
-                    alt="Decorative background"
-                    className="top-10 left-10 brightness-[2] object-contain w-32 opacity-40"
-                    fill
-                  />
-                </div>
-              </div>
 
               <p className="text-sm text-[#7a7aff] font-semibold">
                 PERFECT COMPANY SOLUTION
@@ -57,25 +55,14 @@ export default function Hero() {
                 <Link
                   href="/contact"
                   passHref
-                  className="bg-[#2c6eff] hover:bg-[#1d4ed8] rounded-full px-6 py-3 text-base text-white">
+                  className="bg-[#2c6eff] hover:bg-[#1d4ed8] rounded-full px-6 py-3 text-base text-white"
+                >
                   CONTACT US TODAY!
                 </Link>
 
                 <div className="flex items-center gap-2 bg-green-500 rounded-full px-6 py-3 text-white">
                   <PhoneCall size={16} />
                   <p className="text-sm">(+92) 349 1703748</p>
-                </div>
-              </div>
-
-              {/* Bottom Decorative Line */}
-              <div className="absolute bottom-[90px] left-[152px] w-full max-w-[1034px] z-[100]">
-                <div className="w-full relative h-28">
-                  <Image
-                    src="/images/hero-bottom-line.webp"
-                    alt="Decorative background"
-                    className="top-10 left-10 brightness-[2] object-contain w-full opacity-40"
-                    fill
-                  />
                 </div>
               </div>
             </div>
@@ -116,26 +103,35 @@ export default function Hero() {
               />
             </div>
           </div>
+          {/* Bottom Decorative Line */}
+          <div className="w-[50%] relative min-h-28">
+            <Image
+              src="/images/hero-bottom-line.webp"
+              alt="Decorative background"
+              className="brightness-[2] object-contain w-full opacity-40"
+              fill
+            />
+          </div>
         </div>
 
         {/* Decorative Overlay - Right Side */}
-        <Image
+        {/* <Image
           src="/images/shape_image_3.ef64cd77e2d47a683564.webp"
           alt="Decorative lines and hex boxes"
           width={400}
           height={80}
           className="brightness-[2] absolute top-[110px] right-[20px] object-contain full opacity-40"
-        />
+        /> */}
 
         {/* Glowing Dot and Line - Bottom Right */}
-        <div className="absolute bottom-[40px] right-[40px] w-6 h-6 bg-[#2c6eff] rounded-full shadow-[0_0_15px_4px_#2c6eff] z-10" ></div>
+        {/* <div className="absolute bottom-[40px] right-[40px] w-6 h-6 bg-[#2c6eff] rounded-full shadow-[0_0_15px_4px_#2c6eff] z-10"></div>
         <Image
           src="/images/shape_image_4.7cff8112270c84d346dd.webp"
           alt="Corner Line"
           width={400}
           height={80}
           className="absolute bottom-[110px] right-[20px] opacity-30 object-contain"
-        />
+        /> */}
       </div>
     </section>
   );
