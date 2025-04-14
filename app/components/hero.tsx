@@ -25,14 +25,17 @@ export default function Hero() {
         <div className="w-full flex items-center justify-center flex-col lg:flex-row">
           {/* Left Section */}
           <div className="max-w-xl space-y-6 z-10">
-            <div className="w-full relative h-28">
-              <Image
-                src="/images/header-bottom-line.webp"
-                alt="Decorative background"
-                className="top-10 left-10 object-contain w-32 opacity-40"
-                fill
-              />
+            <div className="absolute top-[90px] left-[152px] w-full max-w-[1034px] z-[100]">
+              <div className="w-full relative h-28">
+                <Image
+                  src="/images/header-bottom-line.webp"
+                  alt="Decorative background"
+                  className="top-10 left-10 brightness-[2] object-contain w-32 opacity-40"
+                  fill
+                />
+              </div>
             </div>
+
             <p className="text-sm text-[#7a7aff] font-semibold">
               PERFECT COMPANY SOLUTION
             </p>
@@ -71,16 +74,16 @@ export default function Hero() {
                 </div>
               </div>
             </div>
-            <div className="w-full relative h-28">
-              <Image
-                src="/images/hero-bottom-line.webp"
-                alt="Decorative background"
-                className="top-10 left-10 object-contain w-32 opacity-40"
-                fill
-              />
+            <div className="absolute bottom-[90px] left-[152px] w-full max-w-[1034px] z-[100]">
+              <div className="w-full relative h-28">
+                <Image
+                  src="/images/hero-bottom-line.webp"
+                  alt="Decorative background"
+                  className="top-10 left-10 brightness-[2] object-contain w-32 opacity-40"
+                  fill
+                />
+              </div>
             </div>
-
-
           </div>
 
           {/* Right Section with rotating layers */}
