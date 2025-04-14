@@ -11,12 +11,21 @@ export default function Hero() {
       <Header />
       <div className="text-white flex-1 w-full flex flex-col items-center justify-center gap-12 overflow-hidden">
         <div className="w-full flex-1 flex flex-col h-full">
-          <div className="w-[50%] relative h-28">
+          <div className="w-full flex relative justify-between">
+            <div className="w-[50%] relative h-28 justify-between items-center">
+              <Image
+                src="/images/header-bottom-line.webp"
+                alt="Decorative background"
+                className="brightness-[2] object-contain w-full opacity-40"
+                fill
+              />
+            </div>
             <Image
-              src="/images/header-bottom-line.webp"
-              alt="Decorative background"
-              className="brightness-[2] object-contain w-full opacity-40"
-              fill
+              src="/images/shape_image_3.ef64cd77e2d47a683564.webp"
+              alt="Decorative lines and hex boxes"
+              width={400}
+              height={80}
+              className="brightness-[2] absolute w-full max-w-[328px] h-[130px] top-7 object-contain full opacity-40 -right-22"
             />
           </div>
           <div className="w-full flex-1 flex items-center justify-center flex-col lg:flex-row">
@@ -35,7 +44,7 @@ export default function Hero() {
               </h1>
 
               <p className="text-gray-300">
-                In today’s rapidly evolving digital landscape, staying ahead of
+                In today's rapidly evolving digital landscape, staying ahead of
                 the curve is essential for businesses aiming to thrive and
                 succeed.
               </p>
@@ -104,24 +113,27 @@ export default function Hero() {
             </div>
           </div>
           {/* Bottom Decorative Line */}
-          <div className="w-[50%] relative min-h-28">
+          <div className="w-full flex relative justify-between">
+            <div className="w-[50%] relative min-h-28">
+              <Image
+                src="/images/hero-bottom-line.webp"
+                alt="Decorative background"
+                className="brightness-[2] object-contain w-full opacity-40"
+                fill
+              />
+            </div>
             <Image
-              src="/images/hero-bottom-line.webp"
-              alt="Decorative background"
-              className="brightness-[2] object-contain w-full opacity-40"
-              fill
+              src="/images/shape_image_4.7cff8112270c84d346dd.webp"
+              alt="Decorative lines and hex boxes"
+              width={400}
+              height={80}
+              className="brightness-[2] absolute w-full max-w-[328px] h-[130px] bottom-10 object-contain full opacity-40 -right-22"
             />
           </div>
         </div>
 
         {/* Decorative Overlay - Right Side */}
-        {/* <Image
-          src="/images/shape_image_3.ef64cd77e2d47a683564.webp"
-          alt="Decorative lines and hex boxes"
-          width={400}
-          height={80}
-          className="brightness-[2] absolute top-[110px] right-[20px] object-contain full opacity-40"
-        /> */}
+        {/*  */}
 
         {/* Glowing Dot and Line - Bottom Right */}
         {/* <div className="absolute bottom-[40px] right-[40px] w-6 h-6 bg-[#2c6eff] rounded-full shadow-[0_0_15px_4px_#2c6eff] z-10"></div>
