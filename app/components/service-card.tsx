@@ -26,8 +26,7 @@ export default function ServiceCard({
             return (
               <li
                 key={point}
-                className="flex gap-2 items-center px-2 py-1 pl-0 text-gray-700 text-[14px] bg-gradient-to-r from-white to-tc-primary/20"
-              >
+                className="flex gap-2 items-center px-2 py-1 pl-0 text-gray-700 text-[14px] bg-gradient-to-r from-white to-tc-primary/20">
                 <CircleDotIcon size={16} className="text-tc-primary" /> {point}
               </li>
             );
