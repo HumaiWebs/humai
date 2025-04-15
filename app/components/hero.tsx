@@ -9,7 +9,7 @@ export default function Hero() {
     <section className="relative bg-[#05093d] min-h-screen flex flex-col">
       {/* Main Content Left Side */}
       <Header />
-      <div className="text-white flex-1 w-full flex flex-col items-center justify-center gap-12 overflow-hidden">
+      <div className="text-white flex-1 w-full flex flex-col items-center justify-center gap-12">
         <div className="w-full flex-1 flex flex-col h-full">
           <div className="w-full flex relative justify-between">
             <div className="w-[50%] relative h-28 justify-between items-center">
@@ -28,7 +28,7 @@ export default function Hero() {
               className="brightness-[2] absolute w-full max-w-[328px] h-[130px] top-7 object-contain full opacity-40 -right-22"
             />
           </div>
-          <div className="w-full flex-1 flex items-center justify-center flex-col lg:flex-row">
+          <div className="w-full flex-1 flex items-center gap-20 lg:gap-0 justify-center flex-col lg:flex-row">
             {/* Left Section */}
             <div className="max-w-xl space-y-6 z-10">
               {/* Top Decorative Line */}
@@ -77,7 +77,7 @@ export default function Hero() {
             </div>
 
             {/* Right Section - Rotating Layers */}
-            <div className="w-full lg:w-[40%] relative flex justify-center items-center">
+            <div className="w-full lg:w-[40%] min-h-[500px] sm:h-auto relative flex justify-center items-center">
               {/* Base Layer */}
               <Image
                 src="/images/circle_engine_4.ff7d2b5855002c5b9d7f.webp"
