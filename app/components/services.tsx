@@ -23,7 +23,7 @@ export default function Services() {
           />
         </div>
       </div>
-      <div className="flex-1 flex container max-w-[1200px] mx-auto flex-col z-[1] items-center gap-8 border py-12">
+      <div className="flex-1 flex container max-w-[1200px] mx-auto flex-col z-[1] items-center gap-8 py-12">
         <h2 className="uppercase text-gray-700 bg-center pr-[18px] text-[14px] pb-[15px] text-center text-lg bg-[url(/images/text-underline.svg)] bg-no-repeat bg-contain font-semibold">
           Our Services
         </h2>
