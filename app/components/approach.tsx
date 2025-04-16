@@ -42,11 +42,11 @@ function Approach() {
   };
 
   return (
-    <section className="w-full bg-[#e8f1fc] font-sans">
+    <section className="w-full bg-tc-light font-sans">
       {/* Header banner */}
-      <div className="w-full flex items-center">
-        <div className="w-[200px] h-[50px] bg-"></div>
-        <div className="flex-1 bg-tc-light about-clip-path-header h-[50px]"></div>
+      <div className="w-full flex items-center p-0">
+        <div className="w-[200px] h-[50px]"></div>
+        <div className="flex-1 bg-tc-dark mt-0 about-clip-path-header h-[50px]"></div>
       </div>
 
       <div className="max-w-[1200px] mx-auto py-16 px-4 md:px-0">
