@@ -8,7 +8,7 @@ export default function About() {
     <section className="w-full bg-tc-dark">
       <div className="w-full flex items-center">
         <div className="w-[200px] h-[50px] bg-"></div>
-        <div className="flex-1 bg-slate-100 about-clip-path-header h-[50px]"></div>
+        <div className="flex-1 bg-tc-light about-clip-path-header h-[50px]"></div>
         <div className="w-[200px] h-[50px]"></div>
       </div>
       <div className="max-w-[1200px] px-2 lg:px-0 mx-auto py-12">
