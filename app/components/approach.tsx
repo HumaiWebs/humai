@@ -46,7 +46,7 @@ function Approach() {
       {/* Header banner */}
       <div className="w-full flex items-center p-0">
         <div className="w-[200px] h-[50px]"></div>
-        <div className="flex-1 bg-tc-dark mt-0 about-clip-path-header h-[50px]"></div>
+        <div className="flex-1 bg-tc-dark about-clip-path-header -mt-1 h-[50px]"></div>
       </div>
 
       <div className="max-w-[1200px] mx-auto py-16 px-4 md:px-0">
