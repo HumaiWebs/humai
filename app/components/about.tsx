@@ -45,6 +45,7 @@ export default function About() {
                       {new Array(4).fill(0).map((_e, i) => {
                         return i < 3 ? (
                           <div
+                            key={i}
                             className={`rounded-full overflow-hidden h-[50px] w-[50px] ${
                               i > 0 ? `-ml-4` : ""
                             }`}
@@ -59,7 +60,10 @@ export default function About() {
                             </div>
                           </div>
                         ) : (
-                          <div className="bg-tc-primary text-white flex items-center justify-center rounded-full overflow-hidden h-[50px] w-[50px] -ml-4 border-2 border-white z-[1000] text-lg font-semibold">
+                          <div
+                            key={i}
+                            className="bg-tc-primary text-white flex items-center justify-center rounded-full overflow-hidden h-[50px] w-[50px] -ml-4 border-2 border-white z-[1000] text-lg font-semibold"
+                          >
                             8+
                           </div>
                         );
