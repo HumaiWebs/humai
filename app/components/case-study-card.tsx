@@ -42,8 +42,7 @@ export default function CaseStudyCard() {
         </div>
         <Link
           href={"/"}
-          className="uppercase flex items-center max-w-max gap-2 px-7 text-[14px] py-5 hover:bg-tc-dark hover:shadow-2xl rounded-full shadow-md bg-tc-primary text-white font-semibold"
-        >
+          className="uppercase flex items-center max-w-max gap-2 px-7 text-[14px] py-5 hover:bg-tc-dark hover:shadow-2xl rounded-full shadow-md bg-tc-primary text-white font-semibold">
           <p>read case</p> <FaExternalLinkAlt />
         </Link>
       </div>
