@@ -105,7 +105,7 @@ export default function TechnologiesSection() {
   const active = tabs.find((tab) => tab.name === activeTab);
 
   return (
-    <section className="flex items-stretch min-h-[80vh] bg-tc-light py-20">
+    <section className="flex items-stretch min-h-[50vh] bg-tc-light py-20">
       <div className="flex-1 flex container max-w-[1200px] mx-auto flex-col z-[1] items-center gap-10">
         <p className="uppercase text-gray-700 bg-center pr-[18px] text-[14px] pb-[15px] text-center text-lg bg-[url(/images/text-underline.svg)] bg-no-repeat bg-contain font-semibold">
           Our Technologies
@@ -119,7 +119,7 @@ export default function TechnologiesSection() {
             <button
               key={tab.name}
               onClick={() => setActiveTab(tab.name)}
-              className={`px-6 py-2 rounded-lg text-sm font-semibold transition-all duration-300 border ${
+              className={`px-6 py-2 rounded-lg text-sm cursor-pointer font-semibold transition-all duration-300 border ${
                 tab.name === activeTab
                   ? "bg-white text-blue-600 shadow-md border-blue-300"
                   : "bg-blue-100 text-blue-800 hover:bg-white hover:shadow-md border-transparent"

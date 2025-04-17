@@ -1,6 +1,7 @@
 import About from "./components/about";
 import Approach from "./components/approach";
 import CaseStudies from "./components/case-studies";
+import ClientSaying from "./components/clients-saying";
 import Hero from "./components/hero";
 import Services from "./components/services";
 import TechnologiesSection from "./components/technologies";
@@ -13,9 +14,10 @@ export default function Home() {
       </section>
       <Services />
       <About />
-      {/* <CaseStudies /> */}
+      <CaseStudies />
       <Approach />
       <TechnologiesSection />
+      <ClientSaying />
     </>
   );
 }
