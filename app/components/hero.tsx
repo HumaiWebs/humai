@@ -6,9 +6,8 @@ import Header from "./header";
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#05093d] min-h-screen flex flex-col">
+    <section className="relative bg-[#05093d] min-h-screen flex flex-col px-4 sm:px-0">
       {/* Main Content Left Side */}
-      <Header />
       <div className="text-white flex-1 w-full flex flex-col items-center justify-center gap-12">
         <div className="w-full flex-1 flex flex-col h-full">
           <div className="w-full flex relative justify-between">
