@@ -54,75 +54,71 @@ export default function CaseStudies() {
         const rect = caseItem?.getBoundingClientRect();
 
         if (rect) {
-          if (rect?.top <= 0) {
+          if (rect?.top <= 0 && scrollingDown) {
             setItems((prev) => {
               return prev.map((pi) => {
                 const nextId = (Number(_case.id) + 1).toString();
 
-                if (scrollingDown) {
-                  if (pi.id === _case.id) {
-                    pi.style = {
-                      position: "sticky",
-                      top: "10px",
-                      zIndex: Number(_case.id) * 2 * 10,
-                    };
-                  }
+                if (pi.id === _case.id) {
+                  pi.style = {
+                    ...pi.style,
+                    position: "sticky",
+                    top: "10px",
+                    zIndex: Number(_case.id) * 2 * 10,
+                  };
+                }
 
-                  if (pi.id === nextId) {
-                    const element = document.getElementById(nextId);
-                    if (element) {
-                      const marginTop = Math.min(
-                        rect.top * -1,
-                        window.innerHeight - 10
-                      );
-                      element.style.marginTop = `-${marginTop}px`;
-                      pi.style = {
-                        ...pi.style,
-                        top: `-${marginTop}px`,
-                        position: "sticky",
-                        zIndex: Number(pi.id) + 100,
-                      };
-                    }
+                if (pi.id === nextId) {
+                  const element = document.getElementById(nextId);
+                  if (element) {
+                    const marginTop = Math.min(
+                      rect.top * -1,
+                      window.innerHeight - 10
+                    );
+                    pi.style = {
+                      ...pi.style,
+                      top: `-${marginTop}px`,
+                      position: "sticky",
+                      zIndex: Number(pi.id) + 100,
+                    };
                   }
                 }
                 return pi;
               });
             });
           } else {
-            setItems((prev) => {
-              return prev.map((pi) => {
-                const nextId = (Number(_case.id) + 1).toString();
-
-                if (scrollingDown) {
-                  if (pi.id === _case.id) {
-                    pi.style = {
-                      position: "sticky",
-                      top: "10px",
-                      zIndex: Number(_case.id) * 2 * 10,
-                    };
-                  }
-
-                  if (pi.id === nextId) {
-                    const element = document.getElementById(nextId);
-                    if (element) {
-                      const marginTop = Math.min(
-                        rect.top * -1,
-                        window.innerHeight - 10
-                      );
-                      console.log("Margin Top: ", marginTop);
-                      element.style.marginTop = `${marginTop}px`;
-                      pi.style = {
-                        ...pi.style,
-                        top: `-${marginTop}px`,
-                        position: "sticky",
-                        zIndex: Number(pi.id) + 100,
-                      };
-                    }
-                  }
-                }
-                return pi;
-              });
-            });
+            // setItems((prev) => {
+            //   return prev.map((pi) => {
+            //     const nextId = (Number(_case.id) + 1).toString();
+            //     if (scrollingDown) {
+            //       if (pi.id === _case.id) {
+            //         pi.style = {
+            //           position: "sticky",
+            //           top: "10px",
+            //           zIndex: Number(_case.id) * 2 * 10,
+            //         };
+            //       }
+            //       if (pi.id === nextId) {
+            //         const element = document.getElementById(nextId);
+            //         if (element) {
+            //           const marginTop = Math.min(
+            //             rect.top * -1,
+            //             window.innerHeight - 10
+            //           );
+            //           console.log("Margin Top: ", marginTop);
+            //           element.style.marginTop = `${marginTop}px`;
+            //           pi.style = {
+            //             ...pi.style,
+            //             top: `-${marginTop}px`,
+            //             position: "sticky",
+            //             zIndex: Number(pi.id) + 100,
+            //           };
+            //         }
+            //       }
+            //     }
+            //     return pi;
+            //   });
+            // });
           }
         }
         lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Avoid negative scroll console.log(_case.id, " not at or over the top");
