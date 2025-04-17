@@ -63,9 +63,9 @@ export default function Services() {
           />
           <ServiceCard
             Icon={CodeIcon}
-            title="Mobile App Design and Development"
+            title="Custom Software Development"
             points={[
-              "Android development services",
+              "Software Archetecture Design",
               "System Integration Services",
               "Data migration services",
               "Legacy app modernization",

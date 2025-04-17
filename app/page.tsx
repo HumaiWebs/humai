@@ -13,8 +13,9 @@ export default function Home() {
       </section>
       <Services />
       <About />
-      <CaseStudies />
+      {/* <CaseStudies /> */}
       <Approach />
+      <TechnologiesSection />
     </>
   );
 }
