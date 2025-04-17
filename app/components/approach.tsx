@@ -42,11 +42,11 @@ function Approach() {
   };
 
   return (
-    <section className="w-full bg-[#e8f1fc] font-sans">
+    <section className="w-full bg-tc-light font-sans">
       {/* Header banner */}
-      <div className="w-full flex items-center">
-        <div className="w-[200px] h-[50px] bg-"></div>
-        <div className="flex-1 bg-slate-100 about-clip-path-header h-[50px]"></div>
+      <div className="w-full flex items-center p-0">
+        <div className="w-[200px] h-[50px]"></div>
+        <div className="flex-1 bg-tc-dark about-clip-path-header -mt-1 h-[50px]"></div>
       </div>
 
       <div className="max-w-[1200px] mx-auto py-16 px-4 md:px-0">
@@ -65,7 +65,8 @@ function Approach() {
                 <div key={index} className="py-4">
                   <button
                     onClick={() => handleStepClick(index)}
-                    className="w-full text-left flex justify-between items-center">
+                    className="w-full text-left flex justify-between items-center"
+                  >
                     <span className="text-[#0f3e77] font-medium text-lg">
                       {String(index + 1).padStart(2, "0")}. {step.title}
                     </span>
@@ -93,7 +94,8 @@ function Approach() {
                   index === activeIndex
                     ? "bg-[#0453f3] text-white scale-105 shadow-lg"
                     : "border border-[#0f3e77] text-[#0f3e77] bg-white"
-                }`}>
+                }`}
+              >
                 {step.title}
               </button>
             ))}
