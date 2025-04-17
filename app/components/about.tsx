@@ -2,6 +2,7 @@ import { GlobeIcon } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+import CaseStudies from "./case-studies";
 
 export default function About() {
   return (
@@ -106,6 +107,7 @@ export default function About() {
           </div>
         </div>
       </div>
+      <CaseStudies />
     </section>
   );
 }
