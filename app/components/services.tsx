@@ -43,29 +43,29 @@ export default function Services() {
           />
           <ServiceCard
             Icon={CodeIcon}
-            title="Custom Software Development"
+            title="Web Application Development"
             points={[
-              "Software Archetecture Design",
-              "System Integration Services",
-              "Data migration services",
-              "Legacy app modernization",
+              "Web app development services",
+              "Web portal development services",
+              "Website development services",
+              "Offshore web development",
             ]}
           />
           <ServiceCard
             Icon={CodeIcon}
-            title="Custom Software Development"
+            title="Audit & IT Consulting Services"
             points={[
-              "Software Archetecture Design",
-              "System Integration Services",
-              "Data migration services",
-              "Legacy app modernization",
+              "TechGuard Audit",
+              "CyberSafe Audit & IT Consulting",
+              "AssuranceEdge & IT Consulting",
+              "IT Sentry Audit & IT Consulting",
             ]}
           />
           <ServiceCard
             Icon={CodeIcon}
-            title="Custom Software Development"
+            title="Mobile App Design and Development"
             points={[
-              "Software Archetecture Design",
+              "Android development services",
               "System Integration Services",
               "Data migration services",
               "Legacy app modernization",
