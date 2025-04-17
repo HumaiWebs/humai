@@ -44,64 +44,88 @@ export default function CaseStudies() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-
+    let lastScrollTop = 0;
     const handleScroll = () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      const scrollingDown = scrollTop > lastScrollTop;
+
       for (const _case of caseStudies) {
         const caseItem = document.getElementById(_case.id);
         const rect = caseItem?.getBoundingClientRect();
 
-        if (rect?.top && rect?.top <= 0) {
-          setItems((prev) => {
-            return prev.map((pi) => {
-              const nextId = (Number(_case.id) + 1).toString();
+        if (rect) {
+          if (rect?.top <= 0) {
+            setItems((prev) => {
+              return prev.map((pi) => {
+                const nextId = (Number(_case.id) + 1).toString();
 
-              if (pi.id === _case.id) {
-                pi.style = {
-                  position: "sticky",
-                  top: "10px",
-                  zIndex: Number(_case.id) * 2 * 10,
-                };
-              }
+                if (scrollingDown) {
+                  if (pi.id === _case.id) {
+                    pi.style = {
+                      position: "sticky",
+                      top: "10px",
+                      zIndex: Number(_case.id) * 2 * 10,
+                    };
+                  }
 
-              if (pi.id === nextId) {
-                const element = document.getElementById(nextId);
-                if (element) {
-                  const marginTop = Math.min(
-                    rect.top * -1,
-                    window.innerHeight - 10
-                  );
-                  element.style.marginTop = `-${marginTop}px`;
-                  pi.style = {
-                    ...pi.style,
-                    top: `-${marginTop}px`,
-                    position: "sticky",
-                    zIndex: Number(pi.id) + 100,
-                  };
+                  if (pi.id === nextId) {
+                    const element = document.getElementById(nextId);
+                    if (element) {
+                      const marginTop = Math.min(
+                        rect.top * -1,
+                        window.innerHeight - 10
+                      );
+                      element.style.marginTop = `-${marginTop}px`;
+                      pi.style = {
+                        ...pi.style,
+                        top: `-${marginTop}px`,
+                        position: "sticky",
+                        zIndex: Number(pi.id) + 100,
+                      };
+                    }
+                  }
                 }
-              }
-              return pi;
+                return pi;
+              });
             });
-          });
-        }
-        // else if (rect?.top && rect?.top > 0) {
-        //   setItems((prev) => {
-        //     return prev.map((pi) => {
-        //       if (pi.id === _case.id) {
-        //         pi.style = {};
-        //       }
+          } else {
+            setItems((prev) => {
+              return prev.map((pi) => {
+                const nextId = (Number(_case.id) + 1).toString();
 
-        //       const prevId = (Number(_case.id) - 1).toString();
-        //       if (pi.id === prevId) {
-        //         const element = document.getElementById(prevId);
-        //         if (element) {
-        //           element.style.marginTop = `0px`;
-        //           pi.style = {};
-        //         }
-        //       }
-        //       return pi;
-        //     });
-        //   });
-        // }
+                if (scrollingDown) {
+                  if (pi.id === _case.id) {
+                    pi.style = {
+                      position: "sticky",
+                      top: "10px",
+                      zIndex: Number(_case.id) * 2 * 10,
+                    };
+                  }
+
+                  if (pi.id === nextId) {
+                    const element = document.getElementById(nextId);
+                    if (element) {
+                      const marginTop = Math.min(
+                        rect.top * -1,
+                        window.innerHeight - 10
+                      );
+                      console.log("Margin Top: ", marginTop);
+                      element.style.marginTop = `${marginTop}px`;
+                      pi.style = {
+                        ...pi.style,
+                        top: `-${marginTop}px`,
+                        position: "sticky",
+                        zIndex: Number(pi.id) + 100,
+                      };
+                    }
+                  }
+                }
+                return pi;
+              });
+            });
+          }
+        }
+        lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // Avoid negative scroll console.log(_case.id, " not at or over the top");
       }
     };
 
