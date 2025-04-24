@@ -1,5 +1,7 @@
 "use client";
 import React, { useState } from "react";
+import TechnologiesSection from "./technologies";
+import ClientSaying from "./clients-saying";
 
 const steps = [
   {
@@ -100,6 +102,8 @@ function Approach() {
           </div>
         </div>
       </div>
+      <TechnologiesSection />
+      <ClientSaying />
     </section>
   );
 }
