@@ -3,6 +3,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { useRef, useState } from "react";
 import { MenuIcon, ChevronDown } from "lucide-react";
+import { usePathname } from "next/navigation";
 
 export type menuItem = {
   name: string;
@@ -12,7 +13,16 @@ export type menuItem = {
 
 const menuItems: menuItem[] = [
   { name: "Home", link: "/" },
-  { name: "Company", link: "/company" },
+  {
+    name: "Company",
+    link: "/company",
+    children: [
+      { name: "About Us", link: "/about" },
+      { name: "Portfolio", link: "/portfolio" },
+      { name: "Our Team", link: "/team" },
+      { name: "Careers", link: "/careers" },
+    ],
+  },
   {
     name: "Services",
     link: "/services",
@@ -39,7 +49,7 @@ function MenuItem({ item }: { item: menuItem }) {
   const [isOpen, setIsOpen] = useState(false);
   const dropdownRef = useRef<HTMLDivElement>(null);
   const dropdownHeight = dropdownRef.current?.scrollHeight;
-
+  const pathname = usePathname();
   return (
     <div
       className="relative"
@@ -48,7 +58,7 @@ function MenuItem({ item }: { item: menuItem }) {
     >
       <Link
         href={item.link}
-        className="hover:text-blue-400 flex items-center gap-1"
+        className={`hover:text-blue-400 flex items-center gap-1`}
       >
         {item.name}
         {item.children && <ChevronDown className="w-4 h-4" />}
@@ -82,10 +92,17 @@ function MenuItem({ item }: { item: menuItem }) {
 function Header() {
   const [open, setOpen] = useState(false);
   const navRef = useRef<HTMLElement>(null);
+  const pathname = usePathname();
   const navHeight = navRef.current?.scrollHeight;
   console.log("nav height: ", navHeight);
   return (
-    <header className="w-full bg-tc-dark z-50 sm:text-white sm:border-none mx-auto px-4 flex justify-between items-center">
+    <header
+      className={`w-full ${
+        pathname === "/"
+          ? "bg-tc-dark sm:text-white"
+          : "bg-white sm:text-tc-dark"
+      } z-50 sm:border-none mx-auto px-4 flex justify-between items-center`}
+    >
       {/* Logo */}
       <div>
         <Image
