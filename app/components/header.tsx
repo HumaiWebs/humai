@@ -54,12 +54,10 @@ function MenuItem({ item }: { item: menuItem }) {
     <div
       className="relative"
       onMouseEnter={() => setIsOpen(true)}
-      onMouseLeave={() => setIsOpen(false)}
-    >
+      onMouseLeave={() => setIsOpen(false)}>
       <Link
         href={item.link}
-        className={`hover:text-blue-400 flex items-center gap-1`}
-      >
+        className={`hover:text-blue-400 flex items-center gap-1`}>
         {item.name}
         {item.children && <ChevronDown className="w-4 h-4" />}
       </Link>
@@ -70,15 +68,13 @@ function MenuItem({ item }: { item: menuItem }) {
           style={{
             height: isOpen ? `${dropdownHeight}px` : "0",
           }}
-          className="absolute top-[calc(100%+10px)] left-0 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ease-in-out w-48"
-        >
+          className="absolute top-[calc(100%+10px)] left-0 bg-white shadow-lg rounded-lg overflow-hidden transition-all duration-300 ease-in-out w-48">
           <div className="py-2 w-full z-50">
             {item.children.map((child, idx) => (
               <Link
                 key={idx}
                 href={child.link}
-                className="block px-4 py-2 hover:bg-gray-100 text-gray-800"
-              >
+                className="block px-4 py-2 hover:bg-gray-100 text-gray-800">
                 {child.name}
               </Link>
             ))}
@@ -96,13 +92,7 @@ function Header() {
   const navHeight = navRef.current?.scrollHeight;
   console.log("nav height: ", navHeight);
   return (
-    <header
-      className={`w-full ${
-        pathname === "/"
-          ? "bg-tc-dark sm:text-white"
-          : "bg-white sm:text-tc-dark"
-      } z-50 sm:border-none mx-auto px-4 flex justify-between items-center`}
-    >
+    <header className="w-full bg-tc-dark sm:text-white sm:border-none mx-auto px-56 flex justify-between items-center">
       {/* Logo */}
       <div>
         <Image
@@ -117,15 +107,33 @@ function Header() {
 
       {/* Navigation Desktop */}
       <nav className="hidden flex-1 justify-end sm:flex gap-4 items-center">
-        {menuItems.map((item, idx) => (
-          <MenuItem key={idx} item={item} />
-        ))}
+        <Link href="/" className="hover:text-blue-400 flex items-center">
+          Home
+        </Link>
+        <Link href="/company" className="hover:text-blue-400 flex items-center">
+          Company
+        </Link>
+        <Link
+          href="/portfolio"
+          className="hover:text-blue-400 flex items-center">
+          Portfolio
+        </Link>
+        <Link
+          href="/services"
+          className="hover:text-blue-400 flex items-center">
+          Services
+        </Link>
+        <Link href="/pages" className="hover:text-blue-400 flex items-center">
+          Pages
+        </Link>
+        <Link href="/contact" className="hover:text-blue-400">
+          Contact
+        </Link>
 
         {/* CTA Button */}
         <Link
           href="/get-started"
-          className="bg-[#0066ff] hover:bg-blue-700 rounded-full px-6 py-3 text-white font-medium flex items-center"
-        >
+          className="bg-[#0066ff] hover:bg-blue-700 rounded-full px-6 py-3 text-white font-medium flex items-center">
           GET STARTED <span className="ml-2">➔</span>
         </Link>
       </nav>
@@ -133,50 +141,43 @@ function Header() {
       {/* Navigation Mobile */}
       <nav
         ref={navRef}
-        data-open={open}
-        className="absolute sm:hidden w-full z-[10000] bg-white left-0 top-[100px] overflow-hidden transition-all duration-300"
-        style={{
-          height: open ? `${(navHeight || 0) + 40}px` : "0",
-          padding: open ? "20px" : "0",
-        }}
-      >
-        {menuItems.map((item, idx) => (
-          <div key={idx} className="py-2">
-            <Link
-              href={item.link}
-              className="block text-gray-800 hover:text-blue-400"
-            >
-              {item.name}
-            </Link>
-            {item.children && (
-              <div className="pl-4 mt-2 border-l border-gray-200">
-                {item.children.map((child, childIdx) => (
-                  <Link
-                    key={childIdx}
-                    href={child.link}
-                    className="block py-2 text-gray-600 hover:text-blue-400"
-                  >
-                    {child.name}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
-        ))}
+        className={`absolute sm:hidden sm:w-0 data-[open=true]:h-[${navHeight}px] h-0 sm:h-full sm:bg-transparent sm:flex-row transition-all ease-in overflow-hidden delay-300 top-[100px] flex flex-col gap-4 items-start sm:text-white bg-white w-full text-gray-800 left-0 z-[1000] sm:static lg:flex space-x-8 sm:items-center`}>
+        <Link href="/" className="hover:text-blue-400 flex items-center">
+          Home
+        </Link>
+        <Link href="/company" className="hover:text-blue-400 flex items-center">
+          Company
+        </Link>
+        <Link
+          href="/portfolio"
+          className="hover:text-blue-400 flex items-center">
+          Portfolio
+        </Link>
+        <Link
+          href="/services"
+          className="hover:text-blue-400 flex items-center">
+          Services
+        </Link>
+        <Link href="/pages" className="hover:text-blue-400 flex items-center">
+          Pages
+        </Link>
+        <Link href="/contact" className="hover:text-blue-400">
+          Contact
+        </Link>
 
         {/* Mobile CTA Button */}
         <Link
           href="/get-started"
-          className="bg-[#0066ff] hover:bg-blue-700 rounded-full px-6 py-3 text-white font-medium flex items-center justify-center mt-4"
-        >
+          className="bg-[#0066ff] hover:bg-blue-700 rounded-full px-6 py-3 text-white font-medium flex items-center">
           GET STARTED <span className="ml-2">➔</span>
         </Link>
       </nav>
 
       <div
-        className="sm:hidden cursor-pointer"
-        onClick={() => setOpen((prev) => !prev)}
-      >
+        className="sm:hidden sm:w-0 cursor-pointer"
+        onClick={() => {
+          setOpen((prev) => !prev);
+        }}>
         <MenuIcon />
       </div>
     </header>
