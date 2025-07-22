@@ -12,7 +12,7 @@ export default function About() {
         <div className="flex-1 bg-tc-light about-clip-path-header h-[50px]"></div>
         <div className="w-[200px] h-[50px]"></div>
       </div>
-      <div className="max-w-[1200px] px-2 lg:px-0 mx-auto py-12">
+      <div className="max-w-7xl  lg:px-0 mx-auto py-12 p-0">
         <div className="flex lg:flex-row flex-col justify-between gap-8">
           <div className="lg:flex-1/2 flex items-center lg:items-start flex-col gap-4">
             <h2 className="uppercase text-white bg-center pr-[18px] text-[14px] pb-[15px] text-center text-lg bg-[url(/images/text-underline.svg)] bg-no-repeat bg-contain font-semibold">

@@ -6,7 +6,7 @@ import Header from "./header";
 
 export default function Hero() {
   return (
-    <section className="relative bg-[#05093d] min-h-screen flex flex-col px-4 sm:px-0">
+    <section className="relative bg-tc-dark min-h-screen flex flex-col px-4 sm:px-0">
       {/* Main Content Left Side */}
       <div className="text-white flex-1 w-full flex flex-col items-center justify-center gap-12">
         <div className="w-full flex-1 flex flex-col h-full">
@@ -36,19 +36,19 @@ export default function Hero() {
                 PERFECT COMPANY SOLUTION
               </p>
 
-              <h1 className="text-4xl md:text-5xl font-bold">
+              <h1 className="text-4xl md:text-6xl font-bold">
                 We Help Companies in{" "}
                 <span className="text-[#2c6eff]">Digitizing</span> Their
                 Businesses.
               </h1>
 
-              <p className="text-gray-300">
+              <p className="text-gray-300 text-2xl">
                 In today's rapidly evolving digital landscape, staying ahead of
                 the curve is essential for businesses aiming to thrive and
                 succeed.
               </p>
 
-              <ul className="space-y-2">
+              <ul className="space-y-2 text-2xl">
                 <li className="flex items-center gap-2">
                   <span className="w-2 h-2 bg-[#2c6eff] rounded-full"></span>
                   Focus on quality first
