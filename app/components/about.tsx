@@ -18,10 +18,10 @@ export default function About() {
             <h2 className="uppercase text-white bg-center pr-[18px] text-[14px] pb-[15px] text-center text-lg bg-[url(/images/text-underline.svg)] bg-no-repeat bg-contain font-semibold">
               About us
             </h2>
-            <h3 className="font-bold text-3xl text-tc-primary">
+            <h3 className="font-bold text-4xl text-tc-primary">
               <span className="text-white">Humai</span> Mission & Goal
             </h3>
-            <p className="text-center lg:text-start w-[80%] lg:w-auto">
+            <p className="text-center text-2xl lg:text-start w-[80%] lg:w-auto">
               At HumaiWebs, our mission is to empower businesses through
               innovative software solutions that streamline operations, foster
               growth, and drive success. With a strong commitment to excellence
@@ -29,7 +29,7 @@ export default function About() {
               makes a difference.
             </p>
           </div>
-          <div className="w-full lg:flex-1/2 flex gap-2 justify-center items-start">
+          {/* <div className="w-full lg:flex-1/2 flex gap-2 justify-center items-start">
             <div className="lg:block hidden relative w-[150px] h-[160px]">
               <Image
                 src={"/images/person-typing.webp"}
@@ -38,7 +38,7 @@ export default function About() {
                 className="object-cover rounded"
               />
             </div>
-            <div className="bg-[url(/images/about-white-bg.webp)] -ml-8 flex flex-col justify-between bg-no-repeat bg-center bg-contain w-full h-full">
+            <div className="bg-[url(/images/about-white-bg.webp)] -ml-8 flex flex-col justify-between bg-no-repeat bg-center bg-contain w-6/12 h-full">
               <div className="w-full flex justify-between sm:justify-center gap-8 lg:justify-between items-start">
                 <div className="pl-6 sm:pl-26 pt-4">
                   <div className="flex flex-col gap-1">
@@ -105,9 +105,10 @@ export default function About() {
               </div>
             </div>
           </div>
+        </div> */}
         </div>
       </div>
-      <CaseStudies />
+      {/* <CaseStudies /> */}
     </section>
   );
 }

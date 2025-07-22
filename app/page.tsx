@@ -1,5 +1,6 @@
 import About from "./components/about";
 import Approach from "./components/approach";
+import CaseStudies from "./components/case-studies";
 import ClientSaying from "./components/clients-saying";
 import Footer from "./components/footer";
 
@@ -15,6 +16,7 @@ export default function Home() {
       <Services />
       <About />
       <Approach />
+      {/* <CaseStudies /> */}
     </>
   );
 }

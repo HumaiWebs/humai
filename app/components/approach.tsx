@@ -51,7 +51,7 @@ function Approach() {
         <div className="flex-1 bg-tc-dark about-clip-path-header -mt-1 h-[50px]"></div>
       </div>
 
-      <div className="max-w-[1200px] mx-auto py-16 px-4 md:px-0">
+      <div className="max-w-7xl mx-auto py-16 px-4 md:px-0">
         <div className="flex flex-col md:flex-row justify-between gap-10">
           <div className="md:w-1/2 flex flex-col gap-4">
             <h2 className="uppercase text-[#0f3e77] text-sm font-semibold tracking-wider bg-[url(/images/text-underline.svg)] bg-no-repeat bg-left-bottom pb-2 pl-6 relative">
@@ -62,13 +62,13 @@ function Approach() {
               Our <span className="text-[#0453f3]">Approach</span>
             </h3>
 
-            <div className="flex flex-col divide-y divide-[#b4c7e7] mt-4">
+            <div className="flex flex-col  divide-y divide-[#b4c7e7] mt-4">
               {steps.map((step, index) => (
                 <div key={index} className="py-4">
                   <button
                     onClick={() => handleStepClick(index)}
                     className="w-full text-left flex justify-between items-center">
-                    <span className="text-[#0f3e77] font-medium text-lg">
+                    <span className="text-[#0f3e77] text-2xl font-medium ">
                       {String(index + 1).padStart(2, "0")}. {step.title}
                     </span>
                     <span className="text-2xl font-bold text-[#0f3e77]">
@@ -76,7 +76,7 @@ function Approach() {
                     </span>
                   </button>
                   {activeIndex === index && step.description && (
-                    <div className="mt-4 bg-[#cce1f9] text-[#0f3e77] text-sm p-4 rounded-md leading-relaxed">
+                    <div className="mt-4 bg-[#cce1f9] text-[#0f3e77] text-2xl p-4 rounded-md leading-relaxed">
                       {step.description}
                     </div>
                   )}
@@ -86,7 +86,7 @@ function Approach() {
           </div>
 
           {/* RIGHT SIDE */}
-          <div className="md:w-1/2 flex flex-col items-center gap-6 mt-8 md:mt-0">
+          <div className="md:w-1/2 flex flex-col items-center gap-4 mt-8 md:mt-0">
             {steps.map((step, index) => (
               <button
                 key={index}

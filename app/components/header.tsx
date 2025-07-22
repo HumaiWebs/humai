@@ -110,6 +110,11 @@ function Header() {
         <Link href="/" className="hover:text-blue-400 flex items-center">
           Home
         </Link>
+          <Link
+          href="/services"
+          className="hover:text-blue-400 flex items-center">
+          Services
+        </Link>
         <Link href="/company" className="hover:text-blue-400 flex items-center">
           Company
         </Link>
@@ -118,14 +123,8 @@ function Header() {
           className="hover:text-blue-400 flex items-center">
           Portfolio
         </Link>
-        <Link
-          href="/services"
-          className="hover:text-blue-400 flex items-center">
-          Services
-        </Link>
-        <Link href="/pages" className="hover:text-blue-400 flex items-center">
-          Pages
-        </Link>
+      
+       
         <Link href="/contact" className="hover:text-blue-400">
           Contact
         </Link>
